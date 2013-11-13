@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StaticSite</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <%= link_to "Home", root_path %>
+    <%= link_to "About Us", about_path %>
+    <%= link_to "Privacy", privacy_path %>
+    <%# link_to "Privacy", '/privacy' %>
+  </nav>
+
+  <%= yield %>
+
+  <footer>(c) 2013</footer>
+</body>
+</html>
